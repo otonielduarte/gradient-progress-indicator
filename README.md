@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Colors.blue,
         body: GradientProgressIndicator(
           radius: 120,
           duration: 3,
@@ -28,18 +29,18 @@ class MyApp extends StatelessWidget {
           ],
           gradientColors: const [
             Colors.white,
-            Colors.white70,
+            Colors.grey,
           ],
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Some text',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black, fontSize: 18),
               ),
               Text(
                 'Another text',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black, fontSize: 18),
               ),
             ],
           ),
@@ -50,4 +51,4 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-![Gradient progress indicator](./assets/sample-image.gif)
+![Gradient progress indicator](https://i.giphy.com/media/Smw3omXqeMKxPAvgzn/giphy.webp)

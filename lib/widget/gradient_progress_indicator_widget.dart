@@ -67,57 +67,47 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFF3460AF),
-              Color(0xFF113293),
-            ],
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Center(
-                    child: AnimatedBuilder(
-                      animation: _animationRotationController,
-                      builder: (_, child) {
-                        return Transform.rotate(
-                          angle: _animationRotationController.value * (pi * 2),
-                          child: child,
-                        );
-                      },
-                      child: _GradientCircularProgressIndicator(
-                        gradientColors: widget.gradientColors,
-                        radius: widget.radius,
-                        strokeWidth: widget.strokeWidth,
-                        backgroundColor: widget.backgroundColor,
-                        value: Tween(begin: 0.0, end: 1.0)
-                            .animate(
-                              CurvedAnimation(
-                                parent: _animationController,
-                                curve: Curves.decelerate,
-                              ),
-                            )
-                            .value,
-                        gradientStops: widget.gradientStops,
-                      ),
+    return SizedBox(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          SizedBox(
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Center(
+                  child: AnimatedBuilder(
+                    animation: _animationRotationController,
+                    builder: (_, child) {
+                      return Transform.rotate(
+                        angle: _animationRotationController.value * (pi * 2),
+                        child: child,
+                      );
+                    },
+                    child: _GradientCircularProgressIndicator(
+                      gradientColors: widget.gradientColors,
+                      radius: widget.radius,
+                      strokeWidth: widget.strokeWidth,
+                      backgroundColor: widget.backgroundColor,
+                      value: Tween(begin: 0.0, end: 1.0)
+                          .animate(
+                            CurvedAnimation(
+                              parent: _animationController,
+                              curve: Curves.decelerate,
+                            ),
+                          )
+                          .value,
+                      gradientStops: widget.gradientStops,
                     ),
                   ),
-                  Center(
-                    child: widget.child,
-                  ),
-                ],
-              ),
+                ),
+                Center(
+                  child: widget.child,
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
