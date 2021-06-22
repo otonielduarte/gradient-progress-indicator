@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+/// This class show the Gradient Progress Indicator
 class GradientProgressIndicator extends StatefulWidget {
   const GradientProgressIndicator({
     required this.child,
