@@ -51,4 +51,4 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-![Gradient progress indicator](./assets/sample-image.gif)
+![Gradient progress indicator](https://i.giphy.com/media/Smw3omXqeMKxPAvgzn/giphy.webp)
