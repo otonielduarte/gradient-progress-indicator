@@ -1,6 +1,6 @@
 name: gradient_progress_indicator
 description: A new Flutter package project.
-version: 1.0.0+2
+version: 1.0.0+3
 repository: https://github.com/otonielduarte/gradient-progress-indicator
 
 environment:

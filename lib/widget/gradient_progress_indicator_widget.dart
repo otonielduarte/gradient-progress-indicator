@@ -45,12 +45,10 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator>
     );
 
     _animationController.addListener(() {
-      if (_animationController.value >= 0.75) {
-        if (_animationRotationController.value == 0) {
-          _animationRotationController.repeat();
-        }
-      }
       setState(() {});
+      if (_animationController.isCompleted) {
+        _animationRotationController.repeat();
+      }
     });
     _animationRotationController.addListener(() => setState(() {}));
 
