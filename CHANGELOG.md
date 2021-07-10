@@ -1,3 +1,5 @@
+## 1.0.0+3
+fixed when the first animation ends and second animation start
 ## 1.0.0+2
 Update README.md and remove internal scaffold
 ## 1.0.0+1
