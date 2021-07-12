@@ -1,5 +1,5 @@
-## 1.0.0+4
-Possibility to change curve on the start animation.
+## 1.0.0+5
+Change app description.
 ## 1.0.0+3
 Fixed when the first animation ends and second animation start
 ## 1.0.0+2

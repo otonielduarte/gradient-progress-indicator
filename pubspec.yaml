@@ -1,6 +1,6 @@
 name: gradient_progress_indicator
 description: This package shows a circular progress indicator with gradient colors, and it is possible insert texts inside that.
-version: 1.0.0+4
+version: 1.0.0+5
 repository: https://github.com/otonielduarte/gradient-progress-indicator
 
 environment:
