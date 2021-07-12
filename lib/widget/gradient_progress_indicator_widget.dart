@@ -29,6 +29,7 @@ class GradientProgressIndicator extends StatefulWidget {
       _GradientProgressIndicatorState();
 }
 
+// The class is a state class of GradientProgress
 class _GradientProgressIndicatorState extends State<GradientProgressIndicator>
     with TickerProviderStateMixin {
   late AnimationController _animationController;
@@ -114,6 +115,7 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator>
   }
 }
 
+// This class receive the configurations of gradientcircular
 class _GradientCircularProgressIndicator extends StatelessWidget {
   _GradientCircularProgressIndicator({
     this.strokeWidth = 10.0,
@@ -153,6 +155,7 @@ class _GradientCircularProgressIndicator extends StatelessWidget {
   }
 }
 
+// This class paint is gradientcircular
 class _GradientCircularProgressPainter extends CustomPainter {
   _GradientCircularProgressPainter({
     required this.strokeWidth,
