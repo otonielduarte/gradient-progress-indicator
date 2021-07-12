@@ -12,6 +12,7 @@ class GradientProgressIndicator extends StatefulWidget {
     required this.gradientColors,
     this.backgroundColor = Colors.transparent,
     this.duration = 4,
+    this.curveType = Curves.easeInQuad,
   });
 
   final Widget child;
@@ -21,6 +22,7 @@ class GradientProgressIndicator extends StatefulWidget {
   final List<double> gradientStops;
   final List<Color> gradientColors;
   final Color backgroundColor;
+  final Curve curveType;
 
   @override
   _GradientProgressIndicatorState createState() =>
@@ -53,6 +55,7 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator>
     _animationRotationController.addListener(() => setState(() {}));
 
     _animationController.forward();
+
     super.initState();
   }
 
@@ -91,7 +94,7 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator>
                           .animate(
                             CurvedAnimation(
                               parent: _animationController,
-                              curve: Curves.decelerate,
+                              curve: widget.curveType,
                             ),
                           )
                           .value,
